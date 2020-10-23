@@ -105,9 +105,9 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.Location = new System.Drawing.Point(17, 284);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(217, 25);
+            this.label5.Size = new System.Drawing.Size(168, 25);
             this.label5.TabIndex = 18;
-            this.label5.Text = "Ты кушала сегодня?";
+            this.label5.Text = "Дата Рождения";
             // 
             // label4
             // 
@@ -170,7 +170,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(575, 637);
+            this.ClientSize = new System.Drawing.Size(594, 649);
             this.Controls.Add(this.btOK);
             this.Controls.Add(this.textBoxDataBorn);
             this.Controls.Add(this.textBoxPassword);

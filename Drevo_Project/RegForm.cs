@@ -34,6 +34,13 @@ namespace Drevo_Project
 
         private void btOK_Click(object sender, EventArgs e)
         {
+            if (textBoxSurname.Text == "" && textBoxName.Text == "" &&
+                textBoxLastname.Text == "" && textBoxDataBorn.Text == "" &&
+                textBoxMail.Text == "" && textBoxPassword.Text == "")
+            {
+                MessageBox.Show("Введите данные");
+            }
+            
             Surname = textBoxSurname.Text;
             Namen = textBoxName.Text;
             Otch = textBoxLastname.Text;

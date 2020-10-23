@@ -11,6 +11,7 @@ using System.Data.SQLite;
 using System.IO;
 using System.Diagnostics;
 using System.Data.SqlClient;
+using System.Drawing.Text;
 
 namespace Drevo_Project
 {
@@ -155,6 +156,23 @@ namespace Drevo_Project
             }
         }
 
+        private void btnToLogin_Click(object sender, EventArgs e)
+        {
+            if (connect.State != ConnectionState.Open)
+            {
+                MessageBox.Show("Сначала подключитесь к БД!");
+                return;
+            }
+
+            Login checkUser = new Login();
+
+            if(checkUser.ShowDialog() == DialogResult.OK)
+            {
+                
+            }
+            
+
+        }
     }
 
 }

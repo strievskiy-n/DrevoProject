@@ -42,6 +42,9 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnToReg = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnToLogin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +54,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(22, 59);
+            this.button1.Location = new System.Drawing.Point(109, 540);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(117, 37);
             this.button1.TabIndex = 14;
@@ -62,7 +65,7 @@
             // lbConnectMsg
             // 
             this.lbConnectMsg.AutoSize = true;
-            this.lbConnectMsg.Location = new System.Drawing.Point(19, 27);
+            this.lbConnectMsg.Location = new System.Drawing.Point(106, 508);
             this.lbConnectMsg.Name = "lbConnectMsg";
             this.lbConnectMsg.Size = new System.Drawing.Size(76, 13);
             this.lbConnectMsg.TabIndex = 16;
@@ -70,7 +73,7 @@
             // 
             // btnConnect
             // 
-            this.btnConnect.Location = new System.Drawing.Point(158, 57);
+            this.btnConnect.Location = new System.Drawing.Point(232, 538);
             this.btnConnect.Name = "btnConnect";
             this.btnConnect.Size = new System.Drawing.Size(133, 39);
             this.btnConnect.TabIndex = 17;
@@ -80,7 +83,7 @@
             // 
             // btnReadDB
             // 
-            this.btnReadDB.Location = new System.Drawing.Point(323, 56);
+            this.btnReadDB.Location = new System.Drawing.Point(371, 538);
             this.btnReadDB.Name = "btnReadDB";
             this.btnReadDB.Size = new System.Drawing.Size(113, 40);
             this.btnReadDB.TabIndex = 18;
@@ -103,10 +106,10 @@
             this.Column6,
             this.Column7});
             this.dgvViewer.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dgvViewer.Location = new System.Drawing.Point(22, 135);
+            this.dgvViewer.Location = new System.Drawing.Point(108, 583);
             this.dgvViewer.Name = "dgvViewer";
             this.dgvViewer.ReadOnly = true;
-            this.dgvViewer.Size = new System.Drawing.Size(745, 426);
+            this.dgvViewer.Size = new System.Drawing.Size(745, 164);
             this.dgvViewer.TabIndex = 19;
             // 
             // Column1
@@ -153,19 +156,51 @@
             // 
             // btnToReg
             // 
-            this.btnToReg.Location = new System.Drawing.Point(470, 56);
+            this.btnToReg.Location = new System.Drawing.Point(380, 258);
             this.btnToReg.Name = "btnToReg";
-            this.btnToReg.Size = new System.Drawing.Size(104, 40);
+            this.btnToReg.Size = new System.Drawing.Size(148, 58);
             this.btnToReg.TabIndex = 20;
-            this.btnToReg.Text = "Добавить";
+            this.btnToReg.Text = "Зарегистрироваться";
             this.btnToReg.UseVisualStyleBackColor = true;
             this.btnToReg.Click += new System.EventHandler(this.btnToReg_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(105, 484);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(196, 13);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Пока висит для проверки работы БД";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(133, 91);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(680, 37);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Создайте генеалогическое древо своей семьи";
+            // 
+            // btnToLogin
+            // 
+            this.btnToLogin.Location = new System.Drawing.Point(378, 201);
+            this.btnToLogin.Name = "btnToLogin";
+            this.btnToLogin.Size = new System.Drawing.Size(150, 51);
+            this.btnToLogin.TabIndex = 23;
+            this.btnToLogin.Text = "Войти";
+            this.btnToLogin.UseVisualStyleBackColor = true;
+            this.btnToLogin.Click += new System.EventHandler(this.btnToLogin_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(797, 638);
+            this.ClientSize = new System.Drawing.Size(961, 769);
+            this.Controls.Add(this.btnToLogin);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnToReg);
             this.Controls.Add(this.dgvViewer);
             this.Controls.Add(this.btnReadDB);
@@ -196,6 +231,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.Button btnToReg;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnToLogin;
     }
 }
 
