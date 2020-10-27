@@ -119,7 +119,7 @@ namespace Drevo_Project
                 }
 
                 this.Hide();
-                MyProfile mainForm = new MyProfile();
+                Main mainForm = new Main();
                 mainForm.Show();
             }
         }
@@ -137,7 +137,7 @@ namespace Drevo_Project
             if(checkUser.ShowDialog() == DialogResult.OK)
             {
                 this.Hide();
-                MyProfile mainForm = new MyProfile();
+                Main mainForm = new Main();
                 mainForm.Show();
             }
 

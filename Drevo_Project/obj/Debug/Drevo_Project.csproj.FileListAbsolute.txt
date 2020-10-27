@@ -20,4 +20,6 @@ C:\Users\Georg\source\repos\Drevo_Project\Drevo_Project\obj\Debug\Drevo_Project.
 C:\Users\Georg\source\repos\Drevo_Project\Drevo_Project\obj\Debug\Drevo_Project.pdb
 C:\Users\Georg\source\repos\Drevo_Project\Drevo_Project\obj\Debug\Drevo_Project.RegForm.resources
 C:\Users\Georg\source\repos\Drevo_Project\Drevo_Project\obj\Debug\Drevo_Project.Login.resources
-C:\Users\Georg\source\repos\Drevo_Project\Drevo_Project\obj\Debug\Drevo_Project.MyProfile.resources
+C:\Users\Georg\source\repos\Drevo_Project\Drevo_Project\obj\Debug\Drevo_Project.EditCard.resources
+C:\Users\Georg\source\repos\Drevo_Project\Drevo_Project\obj\Debug\Drevo_Project.Main.resources
+C:\Users\Georg\source\repos\Drevo_Project\Drevo_Project\obj\Debug\Drevo_Project.Card.resources

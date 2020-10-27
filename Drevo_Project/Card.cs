@@ -10,16 +10,22 @@ using System.Windows.Forms;
 
 namespace Drevo_Project
 {
-    public partial class EditCard : Form
+    public partial class Card : Form
     {
-        public EditCard()
+        public Card()
         {
             InitializeComponent();
         }
 
-        private void buttonSaveInfo_Click(object sender, EventArgs e)
+        private void buttonEditCard_Click(object sender, EventArgs e)
         {
-            DialogResult = DialogResult.OK;
+            EditCard editCard = new EditCard();
+            //editCard.Show();
+
+            if (editCard.ShowDialog() == DialogResult.OK)
+            {
+
+            }
         }
     }
 }

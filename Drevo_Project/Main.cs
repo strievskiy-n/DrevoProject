@@ -15,13 +15,13 @@ using System.Drawing.Text;
 
 namespace Drevo_Project
 {
-    public partial class MyProfile : Form
+    public partial class Main : Form
     {
         
         private String dbName;
         private SQLiteConnection connect;
         private SQLiteCommand command;
-        public MyProfile()
+        public Main()
         {
             InitializeComponent();
         }
@@ -30,6 +30,7 @@ namespace Drevo_Project
         {
 
         }
+
 
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -63,40 +64,15 @@ namespace Drevo_Project
             }
         }
 
-        private void lbDataBorn_Click(object sender, EventArgs e)
+        private void buttonEdit_Click(object sender, EventArgs e)
         {
+            EditCard editCard = new EditCard();
+            //editCard.Show();
 
-        }
+            if(editCard.ShowDialog() == DialogResult.OK)
+            {
 
-        private void buttonMyProfile_Click(object sender, EventArgs e)
-        {
-            panelMyProfile.BringToFront();
-        }
-
-        private void buttonDrevo_Click(object sender, EventArgs e)
-        {
-           
-            panelDrevo.BringToFront();
-        }
-
-        private void buttonPhotoAlbum_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void buttonSearch_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void buttonSettings_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void panelMyProfile_Paint(object sender, PaintEventArgs e)
-        {
-
+            }
         }
     }
 }
