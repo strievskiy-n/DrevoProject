@@ -23,7 +23,7 @@ namespace Drevo_Project
 
         private void Login_Load(object sender, EventArgs e)
         {
-            dbName1 = "sample.sqlite";
+            dbName1 = "UserDatas.sqlite";
         }
 
         private void btnCheckLogin_Click(object sender, EventArgs e)
@@ -33,6 +33,7 @@ namespace Drevo_Project
             if (tbCheckMail.Text == "" && tbCheckPassword.Text == "")
             {
                 MessageBox.Show("Введите данные");
+
             } else
             {
                 userMail = tbCheckMail.Text;
@@ -47,18 +48,20 @@ namespace Drevo_Project
                 cmd.Parameters.AddWithValue("@userMail", tbCheckMail.Text);
                 cmd.Parameters.AddWithValue("@userPassword", tbCheckPassword.Text);
                 SQLiteDataAdapter adapter1 = new SQLiteDataAdapter(cmd);
+
                 DataTable db2 = new DataTable();
                 adapter1.Fill(db2);
 
                 if(db2.Rows.Count > 0)
                 {
                     MessageBox.Show("Вы успешно вошли");
+                    
+
                 } else
                 {
                     MessageBox.Show("Почта или пароль неправильный");
                 }
             }
-
 
 
            DialogResult = DialogResult.OK;

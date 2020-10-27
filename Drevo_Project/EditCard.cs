@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Drevo_Project
 {
-    public partial class MainForm : Form
+    public partial class EditCard : Form
     {
-        public MainForm()
+        public EditCard()
         {
             InitializeComponent();
         }

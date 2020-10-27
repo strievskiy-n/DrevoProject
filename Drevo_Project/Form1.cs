@@ -33,22 +33,13 @@ namespace Drevo_Project
             connect = new SQLiteConnection();
             command = new SQLiteCommand();
 
-            dbName = "sample.sqlite";
+            dbName = "UserDatas.sqlite";
             lbConnectMsg.Text = "Не соединено с БД";
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-            if (File.Exists(dbName))
-            {
-                MessageBox.Show("Уже существует, нажмите Подключиться к БД");
-            }
 
             if (!File.Exists(dbName))
-            {
-                SQLiteConnection.CreateFile(dbName);
-            }
+                    SQLiteConnection.CreateFile(dbName);
+
+            
 
             try
             {
@@ -56,33 +47,10 @@ namespace Drevo_Project
                 connect.Open();
                 command.Connection = connect;
 
-                command.CommandText = "CREATE TABLE IF NOT EXISTS Catalog (id INTEGER PRIMARY KEY AUTOINCREMENT, surname TEXT, name TEXT, otch TEXT, dataBorn TEXT, mail TEXT, password TEXT)";
+                command.CommandText = "CREATE TABLE IF NOT EXISTS User (id INTEGER PRIMARY KEY AUTOINCREMENT, mail TEXT, password TEXT)";
                 command.ExecuteNonQuery();
 
                 lbConnectMsg.Text = "Cоединено с БД";
-            }
-            catch(SQLiteException ex)
-            {
-                lbConnectMsg.Text = "Не соединено с БД";
-                MessageBox.Show("Error: " + ex.Message);
-            }
-        }
-
-        private void btnConnect_Click(object sender, EventArgs e)
-        {
-            if (!File.Exists(dbName))
-            {
-                MessageBox.Show("Пожалуйста нажмите сначала Создать БД! Создаться таблица и уже можно будет к ней подключиться!");
-            }
-
-            try
-            {
-                connect = new SQLiteConnection("Data Source=" + dbName + ";Version=3;");
-                connect.Open();
-                command.Connection = connect;
-
-                lbConnectMsg.Text = "Cоединено с БД";
-
             }
             catch (SQLiteException ex)
             {
@@ -91,7 +59,7 @@ namespace Drevo_Project
             }
         }
 
-        private void btnReadDB_Click(object sender, EventArgs e)
+       private void btnReadDB_Click(object sender, EventArgs e)
         {
 
             DataTable dTable = new DataTable();
@@ -139,11 +107,7 @@ namespace Drevo_Project
             {
                 try
                 {
-                    command.CommandText = "INSERT INTO Catalog ('surname', 'name', 'otch', 'dataBorn', 'mail', 'password') values ('" +
-                        addData.Surname + "' , '" +
-                        addData.Namen + "' , '" +
-                        addData.Otch + "' , '" +
-                        addData.DataBorn + "' , '" +
+                    command.CommandText = "INSERT INTO Catalog ('mail', 'password') values ('" +
                         addData.Mail + "' , '" +
                         addData.Password + "')";
 
@@ -153,6 +117,10 @@ namespace Drevo_Project
                 {
                     MessageBox.Show("Error: " + ex.Message);
                 }
+
+                this.Hide();
+                MyProfile mainForm = new MyProfile();
+                mainForm.Show();
             }
         }
 
@@ -168,11 +136,13 @@ namespace Drevo_Project
 
             if(checkUser.ShowDialog() == DialogResult.OK)
             {
-                
+                this.Hide();
+                MyProfile mainForm = new MyProfile();
+                mainForm.Show();
             }
-            
 
         }
+
     }
 
 }

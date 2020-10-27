@@ -12,10 +12,7 @@ namespace Drevo_Project
 {
     public partial class RegForm : Form
     {
-        public String Namen { get; set; }
-        public String Surname { get; set; }
-        public String Otch { get; set; }
-        public String DataBorn { get; set; }
+
 
         public String Mail { get; set; }
 
@@ -34,17 +31,11 @@ namespace Drevo_Project
 
         private void btOK_Click(object sender, EventArgs e)
         {
-            if (textBoxSurname.Text == "" && textBoxName.Text == "" &&
-                textBoxLastname.Text == "" && textBoxDataBorn.Text == "" &&
-                textBoxMail.Text == "" && textBoxPassword.Text == "")
+            if (textBoxMail.Text == "" && textBoxPassword.Text == "")
             {
                 MessageBox.Show("Введите данные");
             }
             
-            Surname = textBoxSurname.Text;
-            Namen = textBoxName.Text;
-            Otch = textBoxLastname.Text;
-            DataBorn = textBoxDataBorn.Text;
             Mail = textBoxMail.Text;
             Password = textBoxPassword.Text;
 
